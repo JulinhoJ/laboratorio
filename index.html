@@ -259,94 +259,75 @@ infância ao meu filho.</p>
 <div class="buttons-section">
   <div class="buttons-section1">
     <a href="#">
-      <button class="post-button2">R$ 30</button>
-    </a>
+      // Proceed to payment
+        proceedButton.addEventListener("click", function () {
+          // Extrair apenas os números do valor selecionado (caso seja uma string formatada)
+          let numericValue = selectedValue;
+          if (typeof selectedValue === "string") {
+            numericValue = parseInt(selectedValue.replace(/\D/g, ""));
+          }
 
-    <a href="#">
-      <button class="post-button2">R$ 50</button>
-    </a>
+          // Verificar se o valor é menor que 30
+          if (numericValue > 0 && numericValue < 30) {
+            alert("O valor mínimo para doação é de R$ 30,00");
+            // Define o valor para 30
+            selectedValue = 30;
 
-    <a href="#">
-      <button class="post-button2">R$ 80</button>
-    </a>
+            // Atualiza o campo de input se ele estiver sendo usado
+            if (customValue.value) {
+              customValue.value = "R$ 30";
+            }
 
-    <a href="#">
-      <button class="post-button2">R$ 150</button>
-    </a>
+            // Desmarca qualquer opção selecionada
+            donationOptions.forEach((opt) => opt.classList.remove("selected"));
 
-    <a href="#">
-      <button class="post-button2">R$ 250</button>
-    </a>
+            // Destaca a opção de R$30 se existir
+            const option30 = document.querySelector(
+              '.donation-option[data-value="30"]'
+            );
+            if (option30) {
+              option30.classList.add("selected");
+            }
 
-    <a href="#">
-      <button class="post-button2">R$ 350</button>
-    </a>
+            // Retorna sem redirecionar
+            return;
+          }
 
-    <a href="#">
-      <button class="post-button2">R$ 450</button>
-    </a>
-    <a href="#">
-      <button class="post-button2">R$ 600</button>
-    </a>
-    <a href="#">
-      <button class="post-button2">R$ 900</button>
-    </a>
-  </div>
-  <div class="buttons-section1">
-    <a href="#">
-      <button class="post-button2">R$ 40</button>
-    </a>
+          if (numericValue > 0) {
+            // Salvar o valor selecionado em localStorage para uso posterior
+            localStorage.setItem("donationValue", numericValue);
 
-    <a href="#">
-      <button class="post-button2">R$ 70</button>
-    </a>
+            // Converter o valor para centavos antes de redirecionar
+            const valueInCents = numericValue * 100;
 
-    <a href="#">
-      <button class="post-button2">R$ 100</button>
-    </a>
+            // Capturar todos os parâmetros UTM e outros parâmetros da URL atual
+            const currentUrl = window.location.search;
+            const urlParams = new URLSearchParams(currentUrl);
 
-    <a href="#">
-      <button class="post-button2">R$ 200</button>
-    </a>
-    <a href="#">
-      <button class="post-button2">R$ 300</button>
-    </a>
+            // Criar uma nova URL para a página de pagamento com o valor em centavos
+            let redirectUrl = `pagamento/index.html?valor=${valueInCents}`;
 
-    <a href="#">
-      <button class="post-button2">R$ 400</button>
-    </a>
+            // Adicionar todos os parâmetros UTM e outros parâmetros à URL de redirecionamento
+            urlParams.forEach((value, key) => {
+              // Não adicionar o parâmetro 'valor' novamente caso já exista
+              if (key !== "valor") {
+                redirectUrl += `&${key}=${value}`;
+              }
+            });
 
-    <a href="#">
-      <button class="post-button2">R$ 500</button>
-    </a>
-    <a href="#">
-      <button class="post-button2">R$ 700</button>
-    </a>
-    <a href="#">
-      <button class="post-button2">R$ 1000</button>
-    </a>
-  </div>
-</div>
+            // Redirecionar para a página de pagamento com todos os parâmetros
+            window.location.href = redirectUrl;
+          } else {
+            alert("Por favor, escolha ou digite um valor para doar.");
+          }
+        });
 
-</div>
-</div>
-
-<footer>
-<div class="footer-container">
-  <div class="footer-section logo-section">
-    <a>
-      <img src="images/logo.webp">
-    </a>
-  </div>
-
-  <div class="footer-bottom">
-    <p>� 2025 - Todos direitos reservados</p>
-  </div>
-</div>
-</footer>
-
-<script src="./scripts/script.js"></script>
-<script src="js/pix.js"></script>
-
-
-</body></html>
+        // Prevent back navigation
+        history.pushState(null, null, location.href);
+        window.addEventListener("popstate", function () {
+          history.pushState(null, null, location.href);
+        });
+      });
+    </script>
+  </body>
+</html>
