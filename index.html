@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favi.webp" type="image/png">
+  <title>Ajude Ismael</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glide.core.min.css">
+  <link rel="stylesheet" href="css/glide.theme.min.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/qrcode.min.js"></script>
+   <!-- Facebook Pixel Code -->
+   <script>
+     !function(f,b,e,v,n,t,s)
+     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+     n.queue=[];t=b.createElement(e);t.async=!0;
+     t.src=v;s=b.getElementsByTagName(e)[0];
+     s.parentNode.insertBefore(t,s)}(window, document,'script',
+     'https://connect.facebook.net/en_US/fbevents.js');
+   </script>
+   <script>
+     fetch('./scripts/pixelConfig.json')
+         .then(response => response.json())
+         .then(pixelConfig => {
+             // Initialize browser pixel for redundancy
+             fbq('init', pixelConfig.pixelId);
+             fbq('track', 'PageView');
+             console.log('Pixel ID:', pixelConfig.pixelId);
+             
+             // Server-side tracking (PageView)
+             fetch('./api/fb_conversion_api.php', {
+                 method: 'POST',
+                 headers: { 'Content-Type': 'application/json' },
+                 body: JSON.stringify({ eventName: 'PageView' })
+             });
+         })
+         .catch(error => console.error('Error loading pixel config:', error));
+   </script>
+   <noscript>
+     <img height="1" width="1" style="display:none" 
+          src="https://www.facebook.com/tr?id=" + pixelConfig.pixelId + "&ev=PageView&noscript=1"/>
+   </noscript>
+   <!-- End Facebook Pixel Code -->
+ 
+
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a>
+          <img src="images/logo.webp">
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="post">
+    <h3>A Doença do Rato fez meu filho perder o braço. Agora ele só pensa 
+      em morrer. Ajude o Ismael.</h3>
+    <img src="images/image1.webp">
+    <div class="image-container">
+      <div class="likes-container">
+          <img src="images/boll.png" alt="Corações"> <!-- Mini Imagem que você carregou -->
+          <span>117 corações recebidos ❤️</span>
+      </div>
+  </div>
+    <a href="#button-section" class="btn-anchor">
+      <button class="post-button3">DOAR AGORA</button>
+    </a>
+    <p><strong>O braço do meu filho apodreceu em quinze dias.</strong></p>
+
+    <p>Foi mais uma das tragédias causadas pelas <strong>enchentes</strong> que devastaram o <strong>Rio Grande do 
+    Sul</strong> em abril de 2024 - mas dessa, <strong>ninguém fez reportagem</strong>.</p>
+    
+    <p><strong>Meu nome é Sandra</strong> e sou mãe do <strong>Ismael</strong>, esse garotinho lindo de <strong>7 anos</strong>.</p>
+    
+    <p>Ontem, enquanto arrumava a cama dele, encontrei um <strong>desenho escondido</strong> embaixo do 
+    travesseiro.</p>
+    
+    <p>Era ele mesmo, rabiscado com a <strong>mão esquerda</strong>. No desenho, ele tinha <strong>dois braços</strong>.</p>
+    
+    <p>"<strong>Mãe... será que um dia eu vou poder abraçar alguém sem ter vergonha?</strong>"</p>
+    
+    <p>São essas perguntas que me fazem <strong>chorar escondida no banheiro</strong> toda noite.</p>
+    
+    <p>A enchente levou não apenas a nossa casa em <strong>São Sebastião do Caí - RS</strong>, mas também 
+    algo que <strong>dinheiro nenhum pode comprar</strong>: o <strong>braço do meu filho</strong>.</p>
+    
+    <p>Tudo começou num <strong>corte pequeno</strong>, quase insignificante.</p>
+    
+    <p>Na correria pra fugir da <strong>água que invadia nossa casa</strong>, o Ismael esbarrou numa <strong>cerca 
+    submersa</strong>.</p>
+    
+    <p>Com tanta gente <strong>gritando por socorro</strong>, tantos vizinhos perdendo tudo, aquele <strong>cortezinho 
+    pareceu o menor dos problemas</strong>.</p>
+    
+    <p>Eu vi na hora e limpei, fiz um <strong>curativo improvisado</strong> e seguimos em frente.</p>
+    
+    <p>O <strong>posto de saúde</strong> tava <strong>debaixo d'água</strong>.</p>
+    
+    <p>O <strong>hospital mais próximo</strong>, a <strong>40 km</strong>, transbordava de <strong>desabrigados</strong>.</p>
+    
+    <p>Não tínhamos <strong>carro</strong>. Não tínhamos <strong>ônibus</strong>. Não tínhamos nada além da <strong>roupa do corpo</strong> e 
+    da certeza de que aquele corte era o menor dos problemas.</p>
+    
+    <p>No <strong>segundo dia</strong>, veio a <strong>febre</strong>.</p>
+    
+    <p>"<strong>É só um resfriado da chuva</strong>", eu disse pra mim mesma.</p>
+    
+    <p>Dei <strong>dipirona</strong> e continuei acreditando que ele ia melhorar.</p>
+    
+    <p>No <strong>quarto dia</strong>, o braço dele <strong>inchou</strong>.</p>
+    
+    <p>No <strong>sexto dia</strong>, quando finalmente conseguimos carona até o <strong>terceiro hospital</strong> que tentamos, o 
+    cheiro já era de <strong>morte</strong>.</p>
+    
+    <p>"<strong>Por que não trouxe antes?</strong>", perguntou a médica.</p>
+    
+    <p>Como explicar que <strong>andamos quilômetros na lama</strong>?</p>
+    
+    <p>Que <strong>imploramos por ajuda</strong> em dois hospitais lotados?</p>
+    
+    <p>Que passei <strong>noites em claro</strong> vendo meu filho <strong>delirar de febre</strong> num <strong>colchão emprestado</strong>?</p>
+    
+    <p>O diagnóstico veio como uma <strong>sentença</strong>: <strong>leptospirose</strong>, contraída através do corte.</p>
+    
+    <p>A <strong>bactéria da água suja</strong> provocou algo chamado "<strong>fasceíte necrosante</strong>". Em palavras 
+    simples: o <strong>braço do meu filho estava morrendo</strong>.</p>
+        <img src="images/laudo.webp" style="width: 90%; height: auto;">
+        <p><strong>Vi a morte subir pelo braço dele</strong> como uma <strong>linha escura</strong>. Primeiro ficou <strong>roxo</strong>, depois <strong>preto</strong>.</p>
+
+        <p>O <strong>cheiro</strong>... meu Deus, o cheiro era como <strong>carne podre</strong> num açougue abandonado.</p>
+        
+        <p><strong>Doze cirurgias</strong> em <strong>quinze dias</strong>. Os médicos <strong>cortavam um pedaço</strong>, esperavam, <strong>cortavam 
+        mais</strong>.</p>
+        
+        <p>A <strong>infecção não parava</strong>. Até que o <strong>Dr. Paulo</strong> entrou no quarto <strong>chorando</strong>:</p>
+        
+        <p>"<strong>Sandra, se não amputarmos agora</strong>, a infecção vai se espalhar. <strong>Seu filho tem 24 horas de 
+        vida</strong>."</p>
+        
+        <p><strong>Assinei a autorização</strong> com a mesma mão que antes fazia <strong>cafuné</strong> naquele braço que agora 
+        precisava ser <strong>cortado</strong>.</p>
+        
+        <p>Começamos nossa <strong>busca por ajuda</strong> em todos os lugares possíveis.</p>
+        
+        <p>O <strong>SUS oferece próteses básicas</strong>, mas são <strong>rígidas</strong>, sem <strong>movimentos naturais</strong> - como um 
+        pedaço de <strong>plástico preso ao corpo</strong>.</p>
+        
+        <p>Mas mesmo essas próteses eu <strong>solicitei e não recebi resposta</strong>.</p>
+        
+        <p>A <strong>Secretaria de Saúde</strong> tem uma <strong>lista de espera de dois anos</strong>.</p>
+        
+        <p>Foi quando descobrimos a <strong>Bebionic Child</strong>.</p>
+        
+        <p>A <strong>única prótese</strong> que devolve os <strong>movimentos precisos</strong> para uma criança.</p>
+        
+        <p>É a mesma <strong>tecnologia</strong> usada por <strong>cirurgiões</strong> pra operar à distância, adaptada para devolver
+        a <strong>independência</strong> a crianças como o Ismael.</p>
+<img src="images/image2.webp" style="width: 90%; height: auto;">
+<p><strong>Mas cada dia que passa é um dia perdido.</strong></p>
+
+<p>A médica explicou:</p>
+
+<p>"<strong>Existe uma 'janela de oportunidade'</strong> para o cérebro se adaptar à prótese."</p>
+
+<p>"<strong>Se esperarmos muito</strong>, o cérebro do Ismael vai '<strong>desaprender</strong>' os movimentos do braço - e 
+ele pode <strong>nunca mais conseguir usar</strong> uma prótese adequadamente."</p>
+
+<p>O <strong>Ismael de antes</strong> desenhava <strong>planetas e foguetes</strong>. Sonhava em ser médico "<strong>pra consertar 
+as pessoas machucadas</strong>, igual o doutor consertou a vovó".</p>
+
+<p>Agora, ele <strong>se esconde pra comer no banheiro</strong> da escola. Os colegas chamam ele de 
+"<strong>aleijado</strong>". Semana passada, encontrei um <strong>bilhete no caderno</strong> dele:</p>
+
+<p>"<strong>Queria que a água tivesse me levado junto</strong>".</p>
+
+<p><strong>Meu filho tem 7 anos e já pensa em morrer.</strong></p>
+
+<p>A prótese <strong>Bebionic Child</strong> custa <strong>R$ 87.000</strong>. Para outros, é um número. Pra nós, é a diferença 
+entre deixar uma criança <strong>sobreviver ou viver de verdade</strong>.</p>
+
+<p>Com ela, Ismael poderia:</p>
+
+<p><strong>● Fazer sua própria higiene no banheiro</strong> (imagina a <strong>humilhação</strong> de um menino de 7 
+  anos precisar da mãe para isso).</p>
+  
+  <p><strong>● Se secar depois do banho</strong> (todo dia ele sai <strong>pingando do chuveiro</strong>, esperando que eu 
+  o seque como um <strong>bebê</strong>).</p>
+  
+  <p><strong>● Trocar a própria roupa íntima</strong> sem precisar de ajuda (ele já me perguntou se vai 
+  precisar de mim para isso <strong>para sempre</strong>).</p>
+  
+  <p><strong>● Fechar o zíper da calça</strong> sozinho no banheiro da escola (por isso ele só usa <strong>calça de 
+  elástico</strong> agora).</p>
+
+  <p><strong>Já conseguimos R$ 23.450</strong> com a ajuda de <strong>amigos, familiares</strong> e <strong>pessoas de bom coração</strong>.</p>
+
+<p><strong>Faltam R$ 63.550</strong>. E o <strong>tempo está correndo contra nós</strong>.</p>
+
+<p>A médica explicou que quanto mais esperamos, mais o <strong>cérebro dele "esquece"</strong> como é ter 
+<strong>dois braços</strong>.</p>
+
+<p>Os <strong>músculos do ombro</strong> podem <strong>atrofiar</strong>. O Ismael pode <strong>perder pra sempre</strong> a chance de 
+usar uma <strong>prótese</strong>.</p>
+
+<p>Me <strong>aperta o coração</strong> quando ele diz que <strong>preferia estar morto</strong>.</p>
+
+<p>Então por favor, se você pode ajudar, <strong>clique abaixo</strong> e faça a sua <strong>doação</strong>.</p>
+<a href="#button-section" class="btn-anchor">
+  <button class="post-button3">DOAR AGORA</button>
+</a>
+<p>Mas independente se você pode doar <strong>muito ou pouco</strong>, <strong>muito obrigada</strong>.</p>
+
+<p><strong>Deus vê sua bondade</strong>, e você será <strong>abençoado</strong> por isso.</p>
+
+<p><strong>Cada segundo conta</strong>. <strong>Cada real conta</strong>. <strong>Cada compartilhamento conta</strong>.</p>
+
+<p>Se você pode doar, por favor, <strong>faça isso agora</strong> clicando abaixo.</p>
+<a href="#button-section" class="btn-anchor">
+  <button class="post-button3">DOAR AGORA</button>
+</a>
+<p><strong>Você receberá:</strong></p>
+
+<p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+<p><strong>● Vídeo do primeiro abraço</strong> dele com a prótese</p>
+<p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+<p><strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma <strong>nova chance</strong> de devolver a 
+infância ao meu filho.</p>
+
+<p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+<p><strong>Att: Sandra, Mãe do Ismael</strong>.</p>
+  
+<div id="button-section">
+  <div class="progress-content">
+    <div class="progress-text">
+      <h4>Arrecadado</h4>
+      <div class="progress-values">
+        <p>R$ 23.450,41</p>
+            <p>R$ 87.000,00</p>
+      </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 27%">
+        <strong>27%</strong>
+      </div>
+    </div>
+  </div>
+  
+
+   <h2>Clique no valor que deseja doar</h2>
+<div class="buttons-section">
+  <div class="buttons-section1">
+    <a href="#">
+      <button class="post-button2">R$ 30</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 50</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 80</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 150</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 250</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 350</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 450</button>
+    </a>
+    <a href="#">
+      <button class="post-button2">R$ 600</button>
+    </a>
+    <a href="#">
+      <button class="post-button2">R$ 900</button>
+    </a>
+  </div>
+  <div class="buttons-section1">
+    <a href="#">
+      <button class="post-button2">R$ 40</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 70</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 100</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 200</button>
+    </a>
+    <a href="#">
+      <button class="post-button2">R$ 300</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 400</button>
+    </a>
+
+    <a href="#">
+      <button class="post-button2">R$ 500</button>
+    </a>
+    <a href="#">
+      <button class="post-button2">R$ 700</button>
+    </a>
+    <a href="#">
+      <button class="post-button2">R$ 1000</button>
+    </a>
+  </div>
+</div>
+
+</div>
+</div>
+
+<footer>
+<div class="footer-container">
+  <div class="footer-section logo-section">
+    <a>
+      <img src="images/logo.webp">
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>� 2025 - Todos direitos reservados</p>
+  </div>
+</div>
+</footer>
+
+<script src="./scripts/script.js"></script>
+<script src="js/pix.js"></script>
+
+
+</body></html>
